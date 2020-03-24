@@ -1,0 +1,11 @@
+{
+  "name": "zazou-pottery",
+  "version": "1.0.0",
+  "description": "Pottery Studio website for Jacou Vettard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hamish Stobo",
+  "license": "ISC"
+}
