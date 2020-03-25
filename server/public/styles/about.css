@@ -2,3 +2,11 @@
     height: 100vh;
     max-height: 100vh;
 }
+
+.about-image {
+    width: 100%;
+    border-radius: 50%;
+    width: 40vw;
+    height: 40vw;
+    object-fit: cover;
+}
