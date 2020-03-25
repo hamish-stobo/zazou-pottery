@@ -12,6 +12,10 @@
 }
 
 .scroll-arrow {
+  width: 20%;
+}
+
+/* .scroll-arrow {
   -webkit-animation: sectionArrowAnimation 3s cubic-bezier(.46,.03,.52,.96) infinite;
 	-moz-animation: sectionArrowAnimation 3s cubic-bezier(.46,.03,.52,.96) infinite;
   animation: sectionArrowAnimation 3s cubic-bezier(.46,.03,.52,.96) infinite;
@@ -32,4 +36,4 @@
   0%   { width: 15%; }
   50%  { width: 18%; }
   100% { width: 15%; }
-}
+} */

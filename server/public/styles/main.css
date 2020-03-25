@@ -4,6 +4,7 @@ html, body {
     box-sizing: border-box;
     text-align: center;
     scroll-behavior: smooth;
+    font-family: 'Heebo', sans-serif;
 }
 
 * {
