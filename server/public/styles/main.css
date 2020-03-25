@@ -17,3 +17,7 @@ html, body {
 .main-wrapper {
     background: rgb(240, 240, 240);
 }
+
+.main-wrapper div {
+    padding-top: 6vh;
+}
