@@ -1,7 +1,37 @@
 .navbar {
     position: sticky;
-    top: 5vh;
+    top: 0;
+    z-index: 1;
+    background: white;
+    height: 6vh;
 }
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.navbar ul li {
+    margin: auto;
+    display: inline;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    height: 100%;
+}
+
+.navbar a:visited {
+    text-decoration: none;
+}
+
+
+
+
 
 .bottom-nav {
     

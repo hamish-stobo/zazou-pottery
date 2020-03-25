@@ -3,7 +3,6 @@ import React from 'react'
 const Navbar = () => {
     return (
         <div className="navbar">
-            <h3>Zazou Pottery Studio</h3>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
