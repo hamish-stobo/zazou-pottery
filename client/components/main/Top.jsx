@@ -5,14 +5,14 @@ const Top = () => {
     return (
         <div className="top-wrapper">
             <h1 className="top-header fade-in">Zazou Pottery</h1>
-            <ul class="slideshow">
+            <Arrow name="About"/>
+            <ul className="slideshow">
                 <li></li>
                 <li></li>
                 <li></li>
                 <li></li>
                 <li></li>
             </ul>
-            <Arrow name="About"/>
         </div>
     )
 }

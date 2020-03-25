@@ -1,9 +1,6 @@
-* {
+html, body, * {
     margin: 0 auto;
     box-sizing: border-box;
     text-align: center;
-}
-
-body {
-    margin: 0 auto;
+    scroll-behavior: smooth;
 }
