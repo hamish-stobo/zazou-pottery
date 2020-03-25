@@ -1,4 +1,23 @@
 .services-wrapper {
-    height: 100vh;
-    min-height: 100vh;
+    background-color: #fff;
+}
+
+.services-wrapper h2 {
+    padding-top: 7vh;
+}
+
+.services-wrapper p {
+    text-align: justify;
+    padding: 10vw 5vw 15vh 5vw;
+}
+
+
+.services-wrapper a {
+    text-decoration: none;
+    color: blue;
+    height: 100%;
+}
+
+.services-wrapper a:visited {
+    text-decoration: none;
 }
