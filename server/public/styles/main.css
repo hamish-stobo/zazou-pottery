@@ -13,3 +13,7 @@ html, body {
     box-sizing: border-box;
     text-align: center;
 }
+
+.main-wrapper {
+    background: rgb(240, 240, 240);
+}

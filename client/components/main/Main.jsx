@@ -6,12 +6,12 @@ import Contact from './Contact.jsx'
 
 const Main = () => {
     return (
-        <>
+        <div className="main-wrapper">
             <About />
             <Services />
             <Gallery />
             <Contact />
-        </>
+        </div>
     )
 }
 

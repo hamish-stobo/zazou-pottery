@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Arrow = ({name}) => {
+const Arrow = () => {
     return (
         <div className="section-scroll">
             <a href="#about">
