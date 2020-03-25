@@ -1,9 +1,11 @@
 import React from 'react'
+import Slider from './slider/Slider.jsx'
 
 const Gallery = () => {
     return (
         <div className="gallery-wrapper" id="gallery">
-            <p>Slick slider like instagram image slider for showcasing selection of Jacou's works</p>
+            <h2>Catalogue</h2>
+            <Slider />
         </div>
     )
 }

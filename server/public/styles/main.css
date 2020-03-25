@@ -5,6 +5,8 @@ html, body {
     text-align: center;
     scroll-behavior: smooth;
     font-family: 'Heebo', sans-serif;
+    height: 100%;
+    width: 100%;
 }
 
 * {
