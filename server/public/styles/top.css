@@ -11,7 +11,7 @@
     color: rgb(0, 168, 180);
 }
 
-.section-name {
+.section-scroll {
     z-index: 1;
     position: relative;
 }
@@ -98,6 +98,6 @@
 	opacity: 1;
 }
 
-.scroll-arrow::before {
-  font-family: "ETmodules";
+.scroll-arrow {
+  
 }

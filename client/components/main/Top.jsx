@@ -11,9 +11,11 @@ const Top = () => {
                 <li></li>
                 <li></li>
             </ul>
-            <div>
-                <span className="section-name fade-in">About Us!</span>
-                <a className="scroll-arrow" href="#about"/>
+            <div className="section-scroll">
+                <span className="section-name fade-in">About Us</span>
+                <a className="scroll-arrow" data-scroll-arrow="" href="#about">
+                    <img src="images/arrow.svg" />
+                </a>
             </div>
         </div>
     )
