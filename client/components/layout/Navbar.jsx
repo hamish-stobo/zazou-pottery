@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Header = () => {
+const Navbar = () => {
     return (
-        <div>
+        <div className="navbar">
             <h3>Zazou Pottery Studio From NavBar</h3>
             <ul>
                 <li><a href="#About">About</a></li>
@@ -14,4 +14,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Navbar

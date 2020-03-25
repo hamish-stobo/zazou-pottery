@@ -1,11 +1,11 @@
 import React from 'react'
-import Header from './Header.jsx'
+import Navbar from './Navbar.jsx'
 import Footer from './Footer.jsx'
 
 const Layout = props => {
     return (
         <>
-            <Header />{props.children}<Footer />
+            <Navbar />{props.children}<Footer />
         </>
     )
 }
