@@ -7,10 +7,10 @@ import Contact from './Contact.jsx'
 const Main = () => {
     return (
         <>
-            <About id="About"/>
-            <Services id="Services"/>
-            <Gallery id="Gallery"/>
-            <Contact id="Contact"/>
+            <About />
+            <Services />
+            <Gallery />
+            <Contact />
         </>
     )
 }

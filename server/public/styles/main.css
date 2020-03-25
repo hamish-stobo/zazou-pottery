@@ -1,6 +1,14 @@
-html, body, * {
+html, body {
     margin: 0 auto;
+    padding: 0 auto;
     box-sizing: border-box;
     text-align: center;
     scroll-behavior: smooth;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
 }

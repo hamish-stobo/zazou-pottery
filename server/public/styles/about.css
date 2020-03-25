@@ -1,6 +1,4 @@
-.about-section {
+.about-wrapper {
     height: 100vh;
     max-height: 100vh;
-    position: relative;
-    top: 100vh;
 }

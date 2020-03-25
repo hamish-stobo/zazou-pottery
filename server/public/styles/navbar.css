@@ -1,4 +1,9 @@
 .navbar {
     position: sticky;
-    top: 0;
+    top: 5vh;
+}
+
+.bottom-nav {
+    position: sticky;
+    bottom: 5vh;
 }
