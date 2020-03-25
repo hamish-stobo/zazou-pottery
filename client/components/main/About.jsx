@@ -5,9 +5,14 @@ const About = () => {
         <div className="about-wrapper" id="about">
             <img className="about-image" src="https://images.unsplash.com/photo-1581462696431-d14025bb6e41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Photo of studio"/>
             <h2>My Story</h2>
-            <p>Zazou Pottery is happy to propose to you a range of hand-decorated ceramic, and handmade pottery.
+            <p>Zazou Pottery Studio was started in 808BC. 
+                A labour of love, Jacou pours her passion and creativity into her work, 
+                and with over 293 years of experience, she has perfected her craft.
+                The studio, situated in beautiful Wanaka, New Zealand, houses many examples
+                of Jacou's work. Blah blah blah good info about the studio give the readers
+                a sense of authenticity.
+            </p>
 
-Welcome, I am Jacou Vettard, of Zazou Pottery Studio, Wanaka. I can create on demand that special gift you want for that special friend, or the products you would like to retail in your shop,  kiwis, ferns, sheep –  New Zealand themes.</p>
         </div>
     )
 }
