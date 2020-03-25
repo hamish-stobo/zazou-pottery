@@ -23,7 +23,7 @@ const Slider = () => {
                 width={getWidth() + images.length} 
             >
             {images.map((slide, idx) => (
-                <Slide key={slide + idx} content={slide} />
+                <Slide width={getWidth()} key={slide + idx} content={slide} />
             ))}
             </SliderContent>
         </div>

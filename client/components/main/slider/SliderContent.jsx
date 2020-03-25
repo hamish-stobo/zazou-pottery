@@ -1,19 +1,16 @@
 import React from 'react'
 
-const SliderContent = props => {
+const SliderContent = ({ translate, transition, width, children }) => {
+    const divStyle = {
+        transform: `translateX-${translate}px`,
+        transition: `transform ease-out ${transition}s`,
+        width: `${width}px`
+    }
     return (
         <>
-        <style>
-        {`
-        .slider-content  {
-            transform: translateX(-${props.translate}px);
-            transition: transform ease-out ${props.transition}s;
-            width: ${props.width}px;
-        }
-        `}
-        </style>
-        <div className="slider-content">
-            {props.children}
+        <div style={divStyle} 
+             className="slider-content">
+            {children}
         </div>
         </>
     )
