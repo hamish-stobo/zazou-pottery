@@ -20,6 +20,6 @@ html, body {
     background: rgb(240, 240, 240);
 }
 
-.main-wrapper div {
+.main-wrapper>div {
     padding-top: 7vh;
 }

@@ -1,13 +1,21 @@
 import React from 'react'
 
-const SliderContent = () => {
-    const width = {
-        
-    }
+const SliderContent = props => {
     return (
-        <div>
-            <h1>From SliderContent component</h1>
+        <>
+        <style>
+        {`
+        .slider-content  {
+            transform: translateX(-${props.translate}px);
+            transition: transform ease-out ${props.transition}s;
+            width: ${props.width}px;
+        }
+        `}
+        </style>
+        <div className="slider-content">
+            {props.children}
         </div>
+        </>
     )
 }
 

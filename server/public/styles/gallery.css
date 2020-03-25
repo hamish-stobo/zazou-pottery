@@ -4,5 +4,22 @@
 }
 
 .slider-wrapper {
+    position: relative;
+    height: 90vh;
+    width: 100vw;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider-content {
+    height: 100%;
+    display: flex;
+}
+
+.slidey {
+    height: 100%;
     width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
