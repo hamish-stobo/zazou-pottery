@@ -1,4 +1,5 @@
 import React from 'react'
+import Arrow from './Arrow.jsx'
 
 const Top = () => {
     return (
@@ -11,12 +12,7 @@ const Top = () => {
                 <li></li>
                 <li></li>
             </ul>
-            <div className="section-scroll">
-                <span className="section-name fade-in">About Us</span>
-                <a className="scroll-arrow" data-scroll-arrow="" href="#about">
-                    <img src="images/arrow.svg" />
-                </a>
-            </div>
+            <Arrow name="About"/>
         </div>
     )
 }
