@@ -51,6 +51,14 @@ const Slider = () => {
           translate: (activeSlide - 1) * getWidth()
         })
       }
+
+      const dotClick = (idx) => {
+          setState({
+              ...state,
+              activeSlide: idx,
+              translate: idx * getWidth()
+          })
+      }
     return (
         <div className="slider-wrapper">
             <SliderContent 
@@ -65,7 +73,7 @@ const Slider = () => {
             <SliderArrow direction="left" handleClick={prevSlide}/>
             <SliderArrow direction="right" handleClick={nextSlide} />
 
-            <Dots slides={slides} activeIndex={activeSlide} />
+            <Dots slides={slides} activeIndex={activeSlide} handleClick={dotClick} />
         </div>
     )
 }
