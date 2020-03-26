@@ -20,7 +20,7 @@ const Slider = () => {
             <SliderContent 
                 translate={translate}
                 transition={transition}
-                width={getWidth() + images.length} 
+                width={getWidth() * images.length} 
             >
             {images.map((slide, idx) => (
                 <Slide width={getWidth()} key={slide + idx} content={slide} />
