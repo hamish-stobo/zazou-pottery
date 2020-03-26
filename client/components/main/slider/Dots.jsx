@@ -11,7 +11,6 @@ const Dot = ({ active, handleClick, i }) => {
         <span 
             className="dot" 
             style={dotStyle}
-            onClick={() => handleClick(i)}
         > </span>
     )
 }
@@ -20,7 +19,7 @@ const Dot = ({ active, handleClick, i }) => {
     return (
     <div className="dots-container">
       {slides.map((slide, i) => (
-        <Dot key={slide} active={activeIndex === i} handleClick={handleClick} i={i}/>
+        <Dot key={slide} active={activeIndex === i} />
       ))} 
     </div>
       )

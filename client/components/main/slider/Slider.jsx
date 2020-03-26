@@ -102,19 +102,21 @@ const Slider = () => {
       activeSlide: activeSlide === 0 ? slides.length - 1 : activeSlide - 1
     })
 
-      const dotClick = (idx) => {
-          setState({
-              ...state,
-              activeSlide: idx,
-              translate: idx * getWidth()
-          })
-      }
+    const dragToScroll = e =>{
+      console.log('event ', e.clientX)
+      setState({
+        ...state,
+        translate: translate * activeSlide + e.clientX
+      })
+    }
+    console.log(state)
     return (
         <div className="slider-wrapper">
             <SliderContent 
                 translate={translate}
                 transition={transition}
                 width={getWidth() * _slides.length} 
+                dragToScroll={dragToScroll}
             >
             {_slides.map((slide, idx) => (
                 <Slide width={getWidth()} key={slide + idx} content={slide} />
@@ -123,7 +125,7 @@ const Slider = () => {
             <SliderArrow direction="left" handleClick={prevSlide}/>
             <SliderArrow direction="right" handleClick={nextSlide} />
 
-            <Dots slides={slides} activeIndex={activeSlide} handleClick={dotClick} />
+            <Dots slides={slides} activeIndex={activeSlide} />
         </div>
     )
 }
