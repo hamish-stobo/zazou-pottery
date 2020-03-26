@@ -5,8 +5,7 @@ html, body {
     text-align: center;
     scroll-behavior: smooth;
     font-family: 'Heebo', sans-serif;
-    height: 100%;
-    width: auto;
+    max-width: 100vw;
 }
 
 * {

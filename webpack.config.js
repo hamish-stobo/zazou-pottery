@@ -17,6 +17,10 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: require.resolve('babel-loader')
             },
+            {
+                test: /\.svg$/,
+                loader: 'svg-inline-loader'
+            }
         ]
     },
     devtool: 'source-map',
