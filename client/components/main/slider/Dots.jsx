@@ -1,11 +1,28 @@
 import React from 'react'
 
-const Dots = () => {
+
+
+const Dot = ({ active }) => {
+    const dotStyle = {
+        background: `${active ? 'black' : 'white'}`
+    }
     return (
-        <div>
-            <h1>From Dots component</h1>
-        </div>
+        <span 
+            className="dot" 
+            style={dotStyle}
+        > </span>
     )
 }
+  
+  const Dots = ({ slides, activeIndex }) => {
+    return (
+    <div className="dots-container">
+      {slides.map((slide, i) => (
+        <Dot key={slide} active={activeIndex === i} />
+      ))} 
+    </div>
+      )
+}
+  
 
 export default Dots
