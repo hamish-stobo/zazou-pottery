@@ -9,8 +9,9 @@ const slides = [
     'https://images.unsplash.com/photo-1526304760382-3591d3840148?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
 ]
 
+const getWidth = () => window.innerWidth
+
 const Slider = () => {
-    const getWidth = () => window.innerWidth
     const [state, setState] = useState({
         activeSlide: 0,
         translate: 0,
@@ -19,20 +20,36 @@ const Slider = () => {
     const { activeSlide, translate, transition } = state
 
     const nextSlide = () => {
-        setState({
-          ...state,
-          translate: translate + getWidth(),
-          activeSlide: activeSlide === slides.length - 1 ? 0 : activeSlide + 1
-        })
-    }
-
-    const prevSlide = () => {
-        setState({
+        if (activeSlide === slides.length - 1) {
+          return setState({
             ...state,
             translate: 0,
-            activeSlide: activeSlide === 0 ? slides.length - 1 : activeSlide - 1
+            activeSlide: 0
           })
-    }
+        }
+    
+        setState({
+          ...state,
+          activeSlide: activeSlide + 1,
+          translate: (activeSlide + 1) * getWidth()
+        })
+      }
+    
+      const prevSlide = () => {
+        if (activeSlide === 0) {
+          return setState({
+            ...state,
+            translate: (slides.length - 1) * getWidth(),
+            activeSlide: slides.length - 1
+          })
+        }
+    
+        setState({
+          ...state,
+          activeSlide: activeSlide - 1,
+          translate: (activeSlide - 1) * getWidth()
+        })
+      }
     return (
         <div className="slider-wrapper">
             <SliderContent 
