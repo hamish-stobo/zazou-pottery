@@ -18,7 +18,7 @@ const slides = [
 
 const getWidth = () => window.innerWidth
 
-const Slider = () => {
+const Slider = ({passIndex}) => {
 
     const firstSlide = slides[0]
     const secondSlide = slides[1]
@@ -126,7 +126,7 @@ const Slider = () => {
             </SliderContent>
             {/* <SliderArrow direction="left" handleClick={prevSlide}/>
             <SliderArrow direction="right" handleClick={nextSlide} /> */}
-            <OrderIcon i={activeSlide}/>
+            <OrderIcon i={activeSlide} passIndex={passIndex} />
             <Dots slides={slides} activeIndex={activeSlide} />
         </div>
     )

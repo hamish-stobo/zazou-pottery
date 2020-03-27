@@ -1,11 +1,11 @@
 import React from 'react'
 import Slider from './slider/Slider.jsx'
 
-const Gallery = () => {
+const Gallery = ({passIndex}) => {
     return (
         <div className="gallery-wrapper" id="gallery">
             <h2>Catalogue</h2>
-            <Slider />
+            <Slider passIndex={passIndex} />
         </div>
     )
 }

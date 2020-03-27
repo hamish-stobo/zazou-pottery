@@ -2,3 +2,19 @@
     height: 100vh;
     min-height: 100vh;
 }
+
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.contact-form label {
+    width: 100%;
+    text-align: justify;
+}
+
+input[name="message"] {
+    height: 100px;
+}

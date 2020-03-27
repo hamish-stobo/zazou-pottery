@@ -1,10 +1,10 @@
 import React from 'react'
 
-const OrderIcon = ({i}) => {
+const OrderIcon = ({i, passIndex}) => {
     
     return (
         <div>
-            <img onClick={() => console.log(i)} className="order-icon" src="images/orderIcon.svg" />
+            <a href="#contact" ><img onClick={() => passIndex(i)} className="order-icon" src="images/orderIcon.svg" /></a>
         </div>
     )
 }

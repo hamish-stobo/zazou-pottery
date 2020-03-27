@@ -1,10 +1,11 @@
 import React from 'react'
+import ContactForm from './ContactForm.jsx'
 
-const Contact = () => {
+const Contact = ({message}) => {
     return (
         <div className="contact-wrapper" id="contact">
             <h4>Contact me!</h4>
-            <p>Form with users name, users email, and message</p>
+            <ContactForm preFill={message} />
             <p>Contact details for the Studio (phone number, address)</p>
         </div>
     )
