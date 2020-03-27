@@ -11,12 +11,12 @@ app.use(express.static(path.join(__dirname, './public')))
 app.use(cors())
 
 const transport = {
-    host: 'imap.gmail.com',
-    port: 993,
-    auth: {
-    user: process.env.EMAIL,
-    pass: process.env.PASS
-  }
+    host: 'smtp.gmail.com',
+    port: 587,
+    SMTPAuth: true,
+    SMTPSecure: 'tls',
+    Username: process.env.EMAIL,
+    Password: process.env.PASS
 }
 
 const transporter = nodemailer.createTransport(transport)
