@@ -124,8 +124,8 @@ const Slider = () => {
                 <Slide width={getWidth()} key={slide + idx} content={slide} />
             ))}
             </SliderContent>
-            <SliderArrow direction="left" handleClick={prevSlide}/>
-            <SliderArrow direction="right" handleClick={nextSlide} />
+            {/* <SliderArrow direction="left" handleClick={prevSlide}/>
+            <SliderArrow direction="right" handleClick={nextSlide} /> */}
             <OrderIcon i={activeSlide}/>
             <Dots slides={slides} activeIndex={activeSlide} />
         </div>
