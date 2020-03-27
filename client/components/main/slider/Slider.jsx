@@ -3,6 +3,7 @@ import SliderContent from './SliderContent'
 import Slide from './Slide.jsx'
 import SliderArrow from './SliderArrow'
 import Dots from './Dots.jsx'
+import OrderIcon from './OrderIcon.jsx'
 
 const slides = [
     'https://images.unsplash.com/photo-1523554888454-84137e72c3ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
@@ -125,7 +126,7 @@ const Slider = () => {
             </SliderContent>
             <SliderArrow direction="left" handleClick={prevSlide}/>
             <SliderArrow direction="right" handleClick={nextSlide} />
-
+            <OrderIcon i={activeSlide}/>
             <Dots slides={slides} activeIndex={activeSlide} />
         </div>
     )

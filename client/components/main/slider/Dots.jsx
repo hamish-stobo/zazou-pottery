@@ -15,7 +15,7 @@ const Dot = ({ active, handleClick, i }) => {
     )
 }
   
-  const Dots = ({ slides, activeIndex, handleClick }) => {
+  const Dots = ({ slides, activeIndex }) => {
     return (
     <div className="dots-container">
       {slides.map((slide, i) => (

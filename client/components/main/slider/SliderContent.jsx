@@ -12,8 +12,8 @@ const SliderContent = ({ translate, transition, width, children, dragToScroll })
 
     const calcDifference = (a, b) => {
         if(!entered) { return }
-
         else {
+        // console.log('start', a, 'end', b)
         dragToScroll(a - b)
     }
 }
@@ -30,6 +30,16 @@ const SliderContent = ({ translate, transition, width, children, dragToScroll })
              onMouseUp={e => {
                  calcDifference(start, e.clientX)
                 }}
+            onTouchStart={e => {
+                e.persist()
+                setEntered(true)
+                setStart(e.touches[0].clientX)
+            }}
+            onTouchEnd={e => {
+                e.persist()
+                setEntered(true)
+                calcDifference(start, e.changedTouches[0].clientX)
+               }}
              >
             {children}
         </div>
