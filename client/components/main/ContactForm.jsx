@@ -11,7 +11,7 @@ const Form = ({preFill}) => {
     const { message } = state
 
     useEffect(() => {
-        setState({ ...state, message: preFill});
+        setState({ ...state, message: preFill ? preFill : ''});
       }, [preFill])
     
     const handleChange = e => {
@@ -22,10 +22,19 @@ const Form = ({preFill}) => {
         })
       }
 
-    const handleSubmit = e => {
+     const handleSubmit = e => {
         e.preventDefault()
-        console.log('state to be submitted', state)
-    }
+        console.log(state)
+        console.log(JSON.stringify(state))
+        fetch('/send',{
+        method: "POST",
+        body: JSON.stringify(state),
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+      })
+      }
     
 
     return (
