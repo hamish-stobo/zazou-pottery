@@ -102,16 +102,17 @@ const Slider = () => {
       activeSlide: activeSlide === 0 ? slides.length - 1 : activeSlide - 1
     })
 
-    const dragToScroll = e =>{
-      console.log('event ', e.clientX)
-      setState({
-        ...state,
-        translate: translate * activeSlide + e.clientX
-      })
+    const dragToScroll = width => {
+      const windowWidth = getWidth()
+      if(width > windowWidth / 3) {
+        nextSlide()
+      } else if(-width > windowWidth / 3) {
+        prevSlide()
+      }
     }
-    console.log(state)
     return (
-        <div className="slider-wrapper">
+        <div className="slider-wrapper"
+        >
             <SliderContent 
                 translate={translate}
                 transition={transition}
