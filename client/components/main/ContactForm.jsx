@@ -1,15 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Form = ({preFill}) => {
     
     const [state, setState] = useState({
         name: '',
         email: '',
-        message: !!preFill ? preFill : ''
+        message: ''
     })
 
     const { message } = state
 
+    useEffect(() => {
+        setState({ ...state, message: preFill});
+      }, [preFill])
+    
     const handleChange = e => {
         console.log(e.target.name, e.target.value)
         setState({
@@ -22,8 +26,6 @@ const Form = ({preFill}) => {
         e.preventDefault()
         console.log('state to be submitted', state)
     }
-
-    console.log(state)
     
 
     return (
