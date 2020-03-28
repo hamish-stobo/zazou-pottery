@@ -2,10 +2,12 @@ const path = require('path')
 const express = require('express')
 const cors = require('cors')
 const nodemailer = require('nodemailer');
+const bodyParser = require('body-parser')
 require('dotenv').config()
 
 const app = express()
 
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json())
 app.use(express.static(path.join(__dirname, './public')))
 app.use(cors())
@@ -13,10 +15,14 @@ app.use(cors())
 const transport = {
     host: 'smtp.gmail.com',
     port: 587,
-    SMTPAuth: true,
-    SMTPSecure: 'tls',
-    Username: process.env.EMAIL,
-    Password: process.env.PASS
+    secure: false, // true for 465, false for other ports
+    auth: {
+        user: process.env.EMAIL, // generated ethereal user
+        pass: process.env.PASS  // generated ethereal password
+    },
+    tls:{
+      rejectUnauthorized:false
+    }
 }
 
 const transporter = nodemailer.createTransport(transport)
@@ -34,9 +40,9 @@ app.post('/send', (req, res, next) => {
     const email = req.body.email
     const message = req.body.message
     const content = `name: ${name} \n email: ${email} \n message: ${message} `
-  
+    console.log(content)
     const mail = {
-      from: name,
+      from: email,
       to: 'hh.stobo@gmail.com',  // Change to email address that you want to receive messages on
       subject: 'Request from Zazou website',
       text: content
@@ -44,6 +50,7 @@ app.post('/send', (req, res, next) => {
   
     transporter.sendMail(mail, (err, data) => {
       if (err) {
+          console.log(err)
         res.json({
           status: 'fail'
         })

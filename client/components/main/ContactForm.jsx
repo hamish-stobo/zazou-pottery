@@ -33,7 +33,18 @@ const Form = ({preFill}) => {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
-      })
+      }).then(
+    	(response) => (response.json())
+       ).then((response)=>{
+      if (response.status === 'success'){
+        alert("Message Sent."); 
+        for(const prop in state) {
+            setState({[prop]: ''})
+        }
+      }else if(response.status === 'fail'){
+        alert("Message failed to send.")
+      }
+    })
       }
     
 
