@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react'
+import Alert from './Alert.jsx'
 
 const Form = ({preFill}) => {
     
     const [state, setState] = useState({
         name: '',
         email: '',
-        message: ''
+        message: '',
+        alert: ''
     })
 
-    const { message } = state
+    const { message, alert } = state
 
     useEffect(() => {
         setState({ ...state, message: preFill ? preFill : ''});
@@ -24,8 +26,6 @@ const Form = ({preFill}) => {
 
      const handleSubmit = e => {
         e.preventDefault()
-        console.log(state)
-        console.log(JSON.stringify(state))
         fetch('/send',{
         method: "POST",
         body: JSON.stringify(state),
@@ -33,22 +33,27 @@ const Form = ({preFill}) => {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
-      }).then(
-    	(response) => (response.json())
-       ).then((response)=>{
+      })
+      .then( response => response.json())
+      .then( response => {
       if (response.status === 'success'){
-        alert("Message Sent."); 
-        for(const prop in state) {
-            setState({[prop]: ''})
-        }
-      }else if(response.status === 'fail'){
-        alert("Message failed to send.")
+        setState({alert: 'Message Sent!'})
+      } else if(response.status === 'fail'){
+        setState({alert: 'Message failed to send.'})
       }
     })
+    }
+
+    const closeAlert = () => {
+      for(const prop in state) {
+        setState({[prop]: ''})
       }
+    }
     
 
     return (
+        <>
+        {alert && <Alert alertMessage={alert} closeAlert={closeAlert}/>}
         <form className="contact-form" onSubmit={handleSubmit}>
             <label>
                 Name:
@@ -64,6 +69,7 @@ const Form = ({preFill}) => {
             </label>
             <input type="submit" value="Submit" />
         </form>
+        </>
     )
 }
 
