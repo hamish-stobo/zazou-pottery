@@ -1,36 +1,58 @@
 const path = require('path')
 const express = require('express')
 const cors = require('cors')
-const nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer')
 const bodyParser = require('body-parser')
+const sendInBlue = require('nodemailer-sendinblue-transport')
+const { google } = require('googleapis')
 require('dotenv').config()
 
 const app = express()
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.json())
 app.use(express.static(path.join(__dirname, './public')))
 app.use(cors())
 
-const transport = {
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: false, // true for 465, false for other ports
-    auth: {
-        user: process.env.EMAIL, // generated ethereal user
-        pass: process.env.PASS  // generated ethereal password
-    },
-    tls:{
-      rejectUnauthorized:false
-    }
-}
+const { OAuth2 } = google.auth
+const OAUTH_PLAYGROUND = 'https://developers.google.com/oauthplayground'
 
-const transporter = nodemailer.createTransport(transport)
+const {
+    MAILING_SERVICE_CLIENT_ID,
+    MAILING_SERVICE_CLIENT_SECRET,
+    MAILING_SERVICE_REFRESH_TOKEN,
+    SENDER_EMAIL_ADDRESS,
+  } = process.env
+
+const oauth2Client = new OAuth2(
+    MAILING_SERVICE_CLIENT_ID,
+    MAILING_SERVICE_CLIENT_SECRET,
+    OAUTH_PLAYGROUND
+)
+
+oauth2Client.setCredentials({
+      refresh_token: MAILING_SERVICE_REFRESH_TOKEN,
+    })
+
+const accessToken = oauth2Client.getAccessToken()
+
+const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        type: 'OAuth2',
+        user: SENDER_EMAIL_ADDRESS,
+        clientId: MAILING_SERVICE_CLIENT_ID,
+        clientSecret: MAILING_SERVICE_CLIENT_SECRET,
+        refreshToken: MAILING_SERVICE_REFRESH_TOKEN,
+        accessToken,
+      },
+})
 
 transporter.verify((error, success) => {
     if (error) {
       console.log(error);
     } else {
+        console.log(success)
       console.log('Server is ready to take messages');
     }
   });

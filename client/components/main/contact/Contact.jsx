@@ -6,7 +6,8 @@ const Contact = ({message}) => {
         <div className="contact-wrapper" id="contact">
             <h4>Contact me!</h4>
             <ContactForm preFill={message} />
-            <p>Contact details for the Studio (phone number, address)</p>
+            <p>Phone: <span>+641029348975</span></p>
+            
         </div>
     )
 }
