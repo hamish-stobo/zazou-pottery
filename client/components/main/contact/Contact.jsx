@@ -24,7 +24,9 @@ const Contact = ({message}) => {
                     <li>Postcode: {address.postCode}</li>
                 </ul>
             </div>
-            <MapContainer address={address}/>
+            <div className="map-wrapper">
+                <MapContainer address={address}/>
+            </div>
         </div>
     )
 }

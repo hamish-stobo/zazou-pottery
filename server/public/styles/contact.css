@@ -23,6 +23,9 @@ input[name="message"] {
     padding-bottom: 24px;
 }
 
-.mapcomponent {
-    height: 50% !important;
+.map-wrapper {
+    position: relative;
+    height: 50vh;
+    padding: 5%;
+    width: 90%;
 }
