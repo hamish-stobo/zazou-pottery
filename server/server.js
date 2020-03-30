@@ -3,7 +3,6 @@ const express = require('express')
 const cors = require('cors')
 const nodemailer = require('nodemailer')
 const bodyParser = require('body-parser')
-const sendInBlue = require('nodemailer-sendinblue-transport')
 const { google } = require('googleapis')
 require('dotenv').config()
 
@@ -52,7 +51,7 @@ transporter.verify((error, success) => {
     if (error) {
       console.log(error);
     } else {
-        console.log(success)
+      console.log(success)
       console.log('Server is ready to take messages');
     }
   });
