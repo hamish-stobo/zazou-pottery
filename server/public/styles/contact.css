@@ -19,5 +19,10 @@ input[name="message"] {
     height: 100px;
 }
 
-.map-wrapper {
+.address-ul {
+    padding-bottom: 24px;
+}
+
+.mapcomponent {
+    height: 50% !important;
 }

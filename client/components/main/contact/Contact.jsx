@@ -15,6 +15,15 @@ const Contact = ({message}) => {
             <ContactForm preFill={message} />
             <p>Phone: <a href='tel:+64211111111'>+64211111111</a></p>
             <a href="https://www.facebook.com/zazoupottery">Facebook</a>
+            <div>
+                <h4>Address</h4>
+                <ul className="address-ul">
+                    <li>Street: {address.street}</li>
+                    <li>Suburb: {address.suburb}</li>
+                    <li>City: {address.city}</li>
+                    <li>Postcode: {address.postCode}</li>
+                </ul>
+            </div>
             <MapContainer address={address}/>
         </div>
     )
