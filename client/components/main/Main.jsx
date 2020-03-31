@@ -4,7 +4,7 @@ import Services from './Services.jsx'
 import Gallery from './Gallery.jsx'
 import Contact from './contact/Contact.jsx'
 
-const Main = () => {
+const Main = ({selected}) => {
     const [message, setMessage] = useState('')
 
     const passIndex = i => {
@@ -15,7 +15,7 @@ const Main = () => {
     return (
         <div className="main-wrapper">
             <About />
-            <Services />
+            <Services selected={selected} />
             <Gallery passIndex={passIndex} />
             <Contact message={message} />
         </div>

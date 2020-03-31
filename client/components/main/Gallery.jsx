@@ -3,7 +3,7 @@ import Slider from './slider/Slider.jsx'
 
 const Gallery = ({passIndex}) => {
     return (
-        <div className="gallery-wrapper" id="gallery">
+        <div className="gallery-wrapper" id="catalogue">
             <h2>Catalogue</h2>
             <Slider passIndex={passIndex} />
         </div>

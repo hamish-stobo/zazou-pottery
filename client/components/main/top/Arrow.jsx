@@ -1,10 +1,11 @@
 import React from 'react'
 
-const Arrow = () => {
+const Arrow = ({selected}) => {
+    console.log('selected in arrow component, ', selected)
     return (
         <div className="section-scroll fade-in">
             <a href="#about">
-                <img src="images/arrow.svg" className="scroll-arrow"/>
+                <img onClick={() => selected('About')} src="images/arrow.svg" className="scroll-arrow"/>
             </a>
         </div>
     )

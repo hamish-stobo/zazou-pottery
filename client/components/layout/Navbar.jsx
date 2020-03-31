@@ -1,11 +1,20 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
-const Navbar = () => {
-    const linksArray = ['#about', '#services', '#gallery', '#contact']
+const Navbar = ({selectedItem}) => {
+    const linksArray = ['#about', '#services', '#catalogue', '#contact']
     const [selected, setSelected] = useState('')
+
+    useEffect(() => {
+        setSelected(selectedItem ? selectedItem : '')
+      }, [selectedItem])
+
     const select = string => {
         setSelected(string)
     }
+
+    console.log('state in navbar component, ', selected)
+    console.log('props in navbar component, ', selectedItem)
+
     return (
         <div className="navbar">
             <div>
