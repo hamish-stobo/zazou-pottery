@@ -59,14 +59,11 @@ const Form = ({preFill}) => {
         <>
         {alert && <Alert alertMessage={alert} closeAlert={closeAlert}/>}
         <form className="contact-form" onSubmit={handleSubmit}>
-            <label>Name:</label>
-            <input type="text" name="name" onChange={handleChange} value={name} required/>
+            <input type="text" name="name" onChange={handleChange} placeholder="Full Name" value={name} required/>
             
-            <label>Email:</label>
-            <input type="email" name="email" onChange={handleChange} value={email} required/>
+            <input type="email" name="email" onChange={handleChange} placeholder="Email" value={email} required/>
             
-            <label>Message:</label>
-            <input type="textarea" name="message" value={message} onChange={handleChange} required/>
+            <textarea name="message" placeholder="Your Message" value={message} onChange={handleChange} required/>
             
             <input type="submit" value="Submit" />
         </form>

@@ -14,34 +14,61 @@
 
 .contact-form {
     padding-top: 3rem;
-    display: grid;
-    grid-template-rows: 1fr 1fr 2fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-        "name-label name-input name-input"
-        "email-label email-input email-input"
-        "message-label message-input message-input"
-        "space submit space";
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
 }
 
-.contact-form button, input, select, textarea {
+.contact-form input, .contact-form textarea{
+    margin-bottom: 0.5rem;
     font-family: inherit;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    width: 100%;
+    text-align: left;
+    height: 5rem;
+    background: rgb(65, 65, 65);
+    border: 0;
+    border-radius: 1rem;
+    color: white;
 }
 
-.contact-form label {
-    grid-column: 1 / 2;
-    margin-left: 2rem;
-    padding: 1rem;
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: white !important;
+}
+     
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color: white !important;  
+}
+     
+input::-moz-placeholder, textarea::-moz-placeholder {  
+    color: white !important;  
+}
+     
+input:-ms-input-placeholder, textarea::-moz-placeholder {  
+    color: white !important;  
 }
 
-.contact-form input {
-    grid-column: 2 / 4;
-    padding: 1rem;
+.contact-form textarea {
+    padding: 1rem 1rem;
+    vertical-align: top;
+    height: 15rem;
 }
 
-.contact-form input[type="submit"] {
-    grid-column: 3 / 4;
+textarea:focus, input:focus{
+    outline: none;
+    border: 2px solid white;
+    border-radius: 1rem;
+}
+
+input[type="submit"] {
+    text-align: center;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
 }
 
 .address-ul {
