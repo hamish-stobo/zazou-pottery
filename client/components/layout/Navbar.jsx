@@ -1,13 +1,23 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const Navbar = () => {
+    const linksArray = ['#about', '#services', '#gallery', '#contact']
+    const [selected, setSelected] = useState('')
+    const select = string => {
+        setSelected(string)
+    }
     return (
         <div className="navbar">
             <div>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#gallery">Catalogue</a>
-                <a href="#contact">Contact</a>
+                {linksArray.map((item, idx) => {
+                    let formatted = item.slice(1, item.length) 
+                    formatted = formatted.charAt(0).toUpperCase() + formatted.slice(1)
+                return (<a onClick={() => select(formatted)} 
+                    className={`${selected === formatted ? formatted : null}`} 
+                    key={item + idx} 
+                    href={item}>{formatted}
+                    </a>)
+                })}
             </div>
         </div>
     )

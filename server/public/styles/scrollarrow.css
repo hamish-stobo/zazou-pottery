@@ -9,6 +9,6 @@
   width: 8rem;
 }
 
-.scroll-arrow:hover {
+.scroll-arrow:active {
   filter: invert(100%);
 }
