@@ -1,26 +1,57 @@
 .contact-wrapper {
-    height: 100vh;
-    min-height: 100vh;
-}
-
-.contact-form {
-    width: 100%;
+    background-color: rgb(178, 34, 34);
+    color: white;
+    padding-top: 0 !important;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-.contact-form label {
-    width: 100%;
-    text-align: justify;
+.contact-wrapper h2 {
+    padding-top: 5rem;
 }
 
-input[name="message"] {
-    height: 100px;
+.contact-form {
+    padding-top: 3rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "name-label name-input name-input"
+        "email-label email-input email-input"
+        "message-label message-input message-input"
+        "space submit space";
+}
+
+.contact-form button, input, select, textarea {
+    font-family: inherit;
+    font-size: 2rem;
+}
+
+.contact-form label {
+    grid-column: 1 / 2;
+    margin-left: 2rem;
+    padding: 1rem;
+}
+
+.contact-form input {
+    grid-column: 2 / 4;
+    padding: 1rem;
+}
+
+.contact-form input[type="submit"] {
+    grid-column: 3 / 4;
 }
 
 .address-ul {
     padding-bottom: 24px;
+    margin: 0 auto;
+}
+
+.address-ul li {
+    text-align: justify;
+    margin: 0 auto;
 }
 
 .map-wrapper {

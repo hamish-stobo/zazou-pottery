@@ -25,6 +25,7 @@ html, body {
 
 .main-wrapper>div {
     padding-top: 4.5rem;
+    min-height: 93vh;
 }
 
 h2 {

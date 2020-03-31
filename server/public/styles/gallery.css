@@ -1,10 +1,5 @@
-.gallery-wrapper {
-    height: 100vh;
-    min-height: 100vh;
-}
-
 .gallery-wrapper h2 {
-    padding: 5rem 0;
+    padding: 5rem 0 3rem 0;
 }
 
 .slider-wrapper {
