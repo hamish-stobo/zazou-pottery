@@ -12,11 +12,13 @@ const Navbar = () => {
                 {linksArray.map((item, idx) => {
                     let formatted = item.slice(1, item.length) 
                     formatted = formatted.charAt(0).toUpperCase() + formatted.slice(1)
-                return (<a onClick={() => select(formatted)} 
-                    className={`${selected === formatted ? formatted : null}`} 
+                return (
+                <a onClick={() => select(formatted)} 
+                    className={`${selected === formatted ? 'active-btn' : ''}`} 
                     key={item + idx} 
                     href={item}>{formatted}
-                    </a>)
+                </a>
+                )
                 })}
             </div>
         </div>
