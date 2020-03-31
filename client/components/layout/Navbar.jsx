@@ -3,12 +3,12 @@ import React from 'react'
 const Navbar = () => {
     return (
         <div className="navbar">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Catalogue</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#gallery">Catalogue</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
     )
 }
