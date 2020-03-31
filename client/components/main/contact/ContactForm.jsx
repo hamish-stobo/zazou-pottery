@@ -26,7 +26,9 @@ const Form = ({preFill}) => {
 
      const handleSubmit = e => {
         e.preventDefault()
-        fetch('/send',{
+     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+      { 
+      fetch('/send',{
         method: "POST",
         body: JSON.stringify(state),
         headers: {
@@ -41,8 +43,11 @@ const Form = ({preFill}) => {
       } else if(response.status === 'fail'){
         setState({alert: 'Message failed to send.'})
       }
-    })
+    }) 
+    } else {
+      setState({alert: 'Invalid email address.'})
     }
+  }
 
     const closeAlert = () => {
       setState({
