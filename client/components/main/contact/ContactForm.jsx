@@ -62,7 +62,7 @@ const Form = ({preFill}) => {
 
     return (
         <>
-        {alert && <Alert alertMessage={alert} closeAlert={closeAlert}/>}
+        <Alert alertMessage={alert} closeAlert={closeAlert}/>
         <form className="contact-form" onSubmit={handleSubmit}>
             <input type="text" name="name" onChange={handleChange} placeholder="Full Name" value={name} required/>
             
