@@ -10,7 +10,7 @@ const Form = ({preFill}) => {
         alert: ''
     })
 
-    const { message, alert } = state
+    const { name, email, message, alert } = state
 
     useEffect(() => {
         setState({ ...state, message: preFill ? preFill : ''});
@@ -45,9 +45,13 @@ const Form = ({preFill}) => {
     }
 
     const closeAlert = () => {
-      for(const prop in state) {
-        setState({[prop]: ''})
-      }
+      setState({
+        ...state,
+        name: '',
+        email: '',
+        message: '',
+        alert: ''
+      })
     }
     
 
@@ -57,11 +61,11 @@ const Form = ({preFill}) => {
         <form className="contact-form" onSubmit={handleSubmit}>
             <label>
                 Name:
-                <input type="text" name="name" onChange={handleChange} required/>
+                <input type="text" name="name" onChange={handleChange} value={name} required/>
             </label>
             <label>
                 Email:
-                <input type="email" name="email" onChange={handleChange} required/>
+                <input type="email" name="email" onChange={handleChange} value={email} required/>
             </label>
             <label>
                 Message:

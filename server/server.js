@@ -65,8 +65,11 @@ app.post('/send', (req, res, next) => {
     const mail = {
       from: email,
       to: 'hh.stobo@gmail.com',  // Change to email address that you want to receive messages on
-      subject: 'Request from Zazou website',
-      text: content
+      subject: 'Request from Zazou Website',
+      text: content,
+      html: `<p><strong>Name:</strong> ${name}</p>
+             <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+             <p><strong>Message:</strong> \n${message}</p>`
     }
   
     transporter.sendMail(mail, (err, data) => {
