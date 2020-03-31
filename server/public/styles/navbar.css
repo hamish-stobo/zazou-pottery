@@ -2,12 +2,8 @@
     position: sticky;
     top: 0;
     z-index: 1;
-    background: white;
-    height: 4.5rem;
+    background: rgba(255,255,255,0.8);
     font-size: 1.5rem;
-}
-
-.navbar div {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -25,6 +21,7 @@
 }
 
 a.active-btn {
-    background: firebrick;
+    background: rgba(178, 34, 34, 0.9);
     color: white;
+    border-bottom: 1px solid black;
 }

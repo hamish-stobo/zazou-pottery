@@ -24,5 +24,9 @@ html, body {
 }
 
 .main-wrapper>div {
-    padding-top: 7vh;
+    padding-top: 4.5rem;
+}
+
+h2 {
+    font-size: 3rem;
 }

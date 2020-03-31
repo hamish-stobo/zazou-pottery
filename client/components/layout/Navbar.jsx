@@ -17,7 +17,6 @@ const Navbar = ({selectedItem}) => {
 
     return (
         <div className="navbar">
-            <div>
                 {linksArray.map((item, idx) => {
                     let formatted = item.slice(1, item.length) 
                     formatted = formatted.charAt(0).toUpperCase() + formatted.slice(1)
@@ -29,7 +28,6 @@ const Navbar = ({selectedItem}) => {
                 </a>
                 )
                 })}
-            </div>
         </div>
     )
 }

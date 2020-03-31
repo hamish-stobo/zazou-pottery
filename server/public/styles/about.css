@@ -1,16 +1,20 @@
 .about-wrapper {
-    padding-bottom: 15vh;
+    min-height: 93vh;
 }
 
 .about-image {
     border-radius: 50%;
-    width: 70vw;
-    height: 70vw;
+    width: 28rem;
+    height: 28rem;
     object-fit: cover;
-    padding: 5vh;
+}
+
+.about-wrapper h2 {
+    padding-top: 5rem;
 }
 
 .about-wrapper p {
     text-align: justify;
-    padding: 5vw 5vw 0 5vw;
+    padding: 3rem 3rem 6rem 3rem;
+    font-size: 1.5rem;
 }

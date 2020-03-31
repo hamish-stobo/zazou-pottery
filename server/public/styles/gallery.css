@@ -3,6 +3,10 @@
     min-height: 100vh;
 }
 
+.gallery-wrapper h2 {
+    padding: 5rem 0;
+}
+
 .slider-wrapper {
     position: relative;
     height: 100vw;
