@@ -166,7 +166,9 @@ input[type="submit"]:hover {
 
 .address-wrapper {
     width: 100%;
-    padding-top: 3rem;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    background: rgb(65, 65, 65);
 }
 
 .address-wrapper h3 {
@@ -195,6 +197,7 @@ input[type="submit"]:hover {
 .info-window {
     color: black;
     text-align: justify !important;
+    font-size: 1.2rem;
 }
 
 .info-window a {

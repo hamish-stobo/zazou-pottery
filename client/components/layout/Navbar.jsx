@@ -12,9 +12,6 @@ const Navbar = ({selectedItem}) => {
         setSelected(string)
     }
 
-    console.log('state in navbar component, ', selected)
-    console.log('props in navbar component, ', selectedItem)
-
     return (
         <div className="navbar">
                 {linksArray.map((item, idx) => {
