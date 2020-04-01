@@ -87,7 +87,7 @@
 .contact-form input, .contact-form textarea{
     margin-bottom: 0.5rem;
     font-family: inherit;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     padding: 0 1rem;
     width: 100%;
     text-align: left;
@@ -97,6 +97,8 @@
     border-radius: 1rem;
     color: white;
 }
+
+/* set color of placeholder text inside inputs */
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     color: white !important;
@@ -128,6 +130,7 @@ textarea:focus, input:focus{
 
 input[type="submit"] {
     text-align: center;
+    font-size: 1.8rem;
 }
 
 input[type="submit"]:hover {
@@ -161,22 +164,44 @@ input[type="submit"]:hover {
     left: 1.5rem;
 }
 
-
-
-.address-ul {
-    padding-bottom: 24px;
-    margin: 0 auto;
-    list-style-type: none;
+.address-wrapper {
+    width: 100%;
+    padding-top: 3rem;
 }
 
-.address-ul li {
-    text-align: justify;
+.address-wrapper h3 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.address-ul {
+    padding-bottom: 1rem;
     margin: 0 auto;
+    list-style-type: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
 }
 
 .map-wrapper {
     position: relative;
-    height: 50vh;
-    padding: 5%;
-    width: 90%;
+    height: 40rem;
+    width: 100%;
+}
+
+
+.info-window {
+    color: black;
+    text-align: justify !important;
+}
+
+.info-window a {
+    text-decoration: none;
+    color: blue;
+}
+
+.info-window a:visited {
+    text-decoration: none;
 }

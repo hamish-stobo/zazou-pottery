@@ -18,12 +18,11 @@ const Contact = ({message}) => {
                 <a href="https://www.facebook.com/zazoupottery" target="_blank"><img src="images/facebook.svg" /></a>
             </div>
             <div className="address-wrapper">
-                <h4>Address</h4>
+                <h3>Address</h3>
                 <ul className="address-ul">
                     <li>{address.street}</li>
                     <li>{address.suburb}</li>
-                    <li>{address.city}</li>
-                    <li>{address.postCode}</li>
+                    <li>{`${address.city} ${address.postCode}`}</li>
                 </ul>
             </div>
             <div className="map-wrapper">

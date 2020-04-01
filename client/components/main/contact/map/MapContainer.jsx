@@ -5,8 +5,7 @@ import mapStyle from '../../../../constants/mapStyle.json'
 const mapStyles = {
   width: '100%',
   height: '100%',
-  top: 0,
-  left: 0
+  transform: 'TranslateX(0)'
 }
 
 const MapContainer = (props) => {
@@ -49,8 +48,7 @@ const MapContainer = (props) => {
     }
     )
 
-    const {street, suburb, city, postCode} = props.address 
-
+    const {street, suburb, city, postCode} = props.address
     return (
       <Map
         className="mapcomponent"
@@ -69,11 +67,15 @@ const MapContainer = (props) => {
           <InfoWindow
            marker={state.activeMarker}
            visible={state.showingInfoWindow}>
-             <ul>
+             <ul className="info-window">
                <li>{street}</li>
                <li>{suburb}</li>
                <li>{city}</li>
                <li>{postCode}</li>
+               <li>
+                 <a target="_blank" href="https://www.google.com/maps/place/Zazou+Pottery+Studio/@-44.6816788,169.1853172,17z/data=!4m5!3m4!1s0xa9d54ef0473d6495:0xf91d702e82f43f86!8m2!3d-44.6817286!4d169.1866046">
+                 View in larger map</a>
+                </li>
              </ul>
          </InfoWindow>
      </Map>
