@@ -14,10 +14,10 @@ const Contact = ({message}) => {
             <h2>Contact me!</h2>
             <ContactForm preFill={message} />
             <div className="icons-wrapper">
-                <p>Phone: <a href='tel:+64211111111'>+64211111111</a></p>
-                <a href="https://www.facebook.com/zazoupottery">Facebook</a>
+                <a href='tel:+64211111111'><img src="images/phone.svg" /></a>
+                <a href="https://www.facebook.com/zazoupottery" target="_blank"><img src="images/facebook.svg" /></a>
             </div>
-            <div>
+            <div className="address-wrapper">
                 <h4>Address</h4>
                 <ul className="address-ul">
                     <li>{address.street}</li>

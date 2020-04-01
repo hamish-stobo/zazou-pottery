@@ -134,9 +134,39 @@ input[type="submit"]:hover {
     cursor: pointer;
 }
 
+.icons-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 5rem;
+}
+
+.icons-wrapper a {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background: rgb(65, 65, 65);
+    display: inline-block;
+    position: relative;
+}
+
+
+
+.icons-wrapper img {
+    width: 4rem;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+}
+
+
+
 .address-ul {
     padding-bottom: 24px;
     margin: 0 auto;
+    list-style-type: none;
 }
 
 .address-ul li {
