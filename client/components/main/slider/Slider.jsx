@@ -112,7 +112,7 @@ const Slider = ({passIndex}) => {
       }
     }
     return (
-        <div className="slider-wrapper"
+        <div className="slider-wrapper gdefault1"
         >
             <SliderContent 
                 translate={translate}
