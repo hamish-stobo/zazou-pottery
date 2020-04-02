@@ -18,10 +18,10 @@
 .adefault, .adefault1, .adefault3 {
     opacity: 0;
     transition: all 1s ease-out;
-    transform: translateY(50px);
+    transform: translateX(-100px);
 }
 
 .fade-mainEls-in {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
 }
