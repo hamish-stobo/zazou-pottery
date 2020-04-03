@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import { Controller, Scene } from 'react-scrollmagic'
 
 const Navbar = ({selectedItem}) => {
     const linksArray = ['#about', '#services', '#catalogue', '#contact']
@@ -22,7 +21,8 @@ const Navbar = ({selectedItem}) => {
                     <a onClick={() => select(formatted)} 
                         className={`${selected === formatted ? 'active-btn' : ''}`} 
                         key={item + idx} 
-                        href={item}>{formatted}
+                        href={item}>
+                    {formatted}
                     </a>
                     )
             })}

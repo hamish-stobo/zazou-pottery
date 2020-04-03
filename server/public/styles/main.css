@@ -9,7 +9,6 @@ html, body {
     text-align: center;
     scroll-behavior: smooth;
     font-family: 'Heebo', sans-serif;
-    overflow-x: hidden;
 }
 
 * {
