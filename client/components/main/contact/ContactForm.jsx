@@ -1,19 +1,24 @@
 import React, { useState, useEffect } from 'react'
 import Alert from './Alert.jsx'
+import switchCase from '../../../constants/switchCase.js'
 
 const Form = ({preFill}) => {
-    
+    console.log(preFill)
     const [state, setState] = useState({
         name: '',
         email: '',
         message: '',
-        alert: ''
+        alert: '',
+        filepath: ''
     })
 
+    const {idx, filepath} = preFill
     const { name, email, message, alert } = state
 
     useEffect(() => {
-        setState({ ...state, message: preFill ? preFill : ''});
+        setState({ ...state, 
+          message:  idx ? switchCase(idx) : '',
+          filepath: filepath ? filepath : ''});
       }, [preFill])
     
     const handleChange = e => {

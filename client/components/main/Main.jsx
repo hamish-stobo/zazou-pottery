@@ -5,11 +5,17 @@ import Gallery from './Gallery.jsx'
 import Contact from './contact/Contact.jsx'
 
 const Main = ({selected}) => {
-    const [message, setMessage] = useState('')
+    const [state, setState] = useState({
+        idx: '',
+        filepath: ''
+    })
 
-    const passIndex = i => {
+    const passIndex = (i, filepath) => {
+        console.log('passed up from carousel', i, filepath)
         i = i.toString()
-        setMessage(i)
+        setState({...state, 
+            idx: i,
+            filepath})
     }
 
     return (
@@ -17,7 +23,7 @@ const Main = ({selected}) => {
             <About />
             <Services selected={selected} />
             <Gallery passIndex={passIndex} />
-            <Contact message={message} />
+            <Contact message={state} />
         </div>
     )
 }

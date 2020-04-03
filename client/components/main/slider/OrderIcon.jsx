@@ -1,11 +1,11 @@
 import React from 'react'
 
-const OrderIcon = ({i, passIndex}) => {
+const OrderIcon = ({i, filepath, passIndex}) => {
     
     return (
         <div>
             <a href="#contact" >
-                <img onClick={() => passIndex(i)} className="order-icon" src="images/orderIcon.svg" /></a>
+                <img onClick={() => passIndex(i, filepath)} className="order-icon" src="images/orderIcon.svg" /></a>
         </div>
     )
 }

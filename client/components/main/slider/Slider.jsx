@@ -6,19 +6,6 @@ import Dots from './Dots.jsx'
 import OrderIcon from './OrderIcon.jsx'
 import slides from '../../../constants/imagesFilePaths'
 
-// import slides from '../../../../server/public/images/catalogue'
-
-// const slides = [
-//     'https://images.unsplash.com/photo-1523554888454-84137e72c3ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-//     'https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1415&q=80',
-//     'https://images.unsplash.com/photo-1526304760382-3591d3840148?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-//     'https://images.unsplash.com/photo-1519233181562-35b0b8bb2b1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-//     'https://images.unsplash.com/photo-1553523292-1140e57d4f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-//     'https://images.unsplash.com/photo-1552344284-834039a82932?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-//     'https://images.unsplash.com/photo-1576873866239-7d7fd7402e1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80',
-//     'https://images.unsplash.com/photo-1583655446990-0e21c2bfb7f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80'
-// ]
-
 const getWidth = () => window.innerWidth
 
 const Slider = ({passIndex}) => {
@@ -129,7 +116,7 @@ const Slider = ({passIndex}) => {
             </SliderContent>
             {/* <SliderArrow direction="left" handleClick={prevSlide}/>
             <SliderArrow direction="right" handleClick={nextSlide} /> */}
-            <OrderIcon i={activeSlide} passIndex={passIndex} />
+            <OrderIcon i={activeSlide} filepath={slides[activeSlide]} passIndex={passIndex} />
             <Dots slides={slides} activeIndex={activeSlide} />
         </div>
     )
