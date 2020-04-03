@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { Controller, Scene } from 'react-scrollmagic'
 
 const Navbar = ({selectedItem}) => {
     const linksArray = ['#about', '#services', '#catalogue', '#contact']
