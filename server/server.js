@@ -62,10 +62,10 @@ app.post('/send', (req, res, next) => {
     const email = req.body.email
     const message = req.body.message
     // server/public/images/catalogue/chillinsanta.jfif
-    const filePath = `${__dirname}/${req.body.filePath}`
+    const filePath = `${__dirname}/public/${req.body.filePath}`
     const parsedImg = filePath.substring(16, (filePath.length - 5))
     const content = `name: ${name} \nemail: ${email} \nmessage: ${message} `
-    console.log(content)
+    console.log('filepath to image ', filePath)
     const mail = {
       from: email,
       to: 'hh.stobo@gmail.com',  // Change to email address that you want to receive messages on
@@ -74,10 +74,11 @@ app.post('/send', (req, res, next) => {
       html: `<p><strong>Name:</strong> ${name}</p>
              <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
              <p><strong>Message:</strong> \n${message}</p>
-             <img style="max-width: 200px; margin-top: 10px;" src='unqsrc'/>`,
-      attachments: [{
+              ${req.body.filePath && '<img style="max-width: 200px; margin-top: 10px;" src="cid:kiqlI8ppW99HrqB6"/>'}`,
+      attachments: req.body.filePath && [{
+        fileName: parsedImg,
         path: filePath,
-        cid: 'unqsrc'
+        cid: 'kiqlI8ppW99HrqB6'
     }]
     }
   

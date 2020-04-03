@@ -1,14 +1,14 @@
 const slides = [
-    "images/catalogue/chillinsanta.jfif",
-    "images/catalogue/crazyglass.jfif",
-    "images/catalogue/cuplineup.jfif",
-    "images/catalogue/leafypots.jfif",
-    "images/catalogue/plantpots.jfif",
-    "images/catalogue/plates.jfif",
-    "images/catalogue/platesandcutlery.jfif",
-    "images/catalogue/russiandollsbutnot.jfif",
-    "images/catalogue/spotoftea.jfif",
-    "images/catalogue/vase.jfif"
+    "images/catalogue/chillinsanta.jpeg",
+    "images/catalogue/crazyglass.jpeg",
+    "images/catalogue/cuplineup.jpeg",
+    "images/catalogue/leafypots.jpeg",
+    "images/catalogue/plantpots.jpeg",
+    "images/catalogue/plates.jpeg",
+    "images/catalogue/platesandcutlery.jpeg",
+    "images/catalogue/russiandollsbutnot.jpeg",
+    "images/catalogue/spotoftea.jpeg",
+    "images/catalogue/vase.jpeg"
 ]
 
 export default slides
