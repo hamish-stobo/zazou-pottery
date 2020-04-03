@@ -11,7 +11,6 @@ const Main = ({selected}) => {
     })
 
     const passIndex = (i, filepath) => {
-        console.log('passed up from carousel', i, filepath)
         i = i.toString()
         setState({...state, 
             idx: i,

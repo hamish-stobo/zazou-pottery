@@ -3,26 +3,24 @@ import Alert from './Alert.jsx'
 import switchCase from '../../../constants/switchCase.js'
 
 const Form = ({preFill}) => {
-    console.log(preFill)
     const [state, setState] = useState({
         name: '',
         email: '',
         message: '',
         alert: '',
-        filepath: ''
+        filePath: ''
     })
 
     const {idx, filepath} = preFill
-    const { name, email, message, alert } = state
+    const { name, email, message, alert, filePath } = state
 
     useEffect(() => {
         setState({ ...state, 
           message:  idx ? switchCase(idx) : '',
-          filepath: filepath ? filepath : ''});
+          filePath: filepath ? filepath : ''});
       }, [preFill])
     
     const handleChange = e => {
-        console.log(e.target.name, e.target.value)
         setState({
             ...state,
           [e.target.name]: e.target.value
@@ -74,6 +72,8 @@ const Form = ({preFill}) => {
             <input type="email" name="email" onChange={handleChange} placeholder="Email" value={email} required/>
             
             <textarea name="message" placeholder="Your Message" value={message} onChange={handleChange} required/>
+
+            {filePath && <input style={{display: 'none'}} type="image" name='image' value={filePath}/>}
             
             <input type="submit" value="Submit" />
         </form>
