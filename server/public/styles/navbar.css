@@ -2,7 +2,7 @@
     position: sticky;
     top: 0;
     z-index: 1;
-    background: rgba(255,255,255,0.8);
+    background: rgba(84, 138, 234, 0.5);
     font-size: 1.5rem;
     display: flex;
     flex-flow: row wrap;
@@ -21,7 +21,7 @@
 }
 
 a.active-btn {
-    background: rgba(178, 34, 34, 0.9);
+    background: rgba(27, 83, 180, 0.568);
     color: white;
     border-bottom: 1px solid black;
 }

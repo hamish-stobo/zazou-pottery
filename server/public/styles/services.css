@@ -1,5 +1,5 @@
 .services-wrapper {
-    background-color: rgb(178, 34, 34);
+    background-color: cornflowerblue;
     color: white;
     padding-top: 0 !important;
 }
@@ -24,7 +24,7 @@
 
 .services-wrapper a {
     text-decoration: none;
-    color: rgb(255,191,0);
+    color: rgb(65, 65, 65);
     height: 100%;
 }
 

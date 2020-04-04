@@ -58,7 +58,8 @@ const Form = ({preFill}) => {
         name: '',
         email: '',
         message: '',
-        alert: ''
+        alert: '',
+        filePath: ''
       })
     }
     
@@ -72,6 +73,8 @@ const Form = ({preFill}) => {
             <input type="email" name="email" onChange={handleChange} placeholder="Email" value={email} required/>
             
             <textarea name="message" placeholder="Your Message" value={message} onChange={handleChange} required/>
+
+            {filepath && <img src={filePath} alt="Image to Order"/>}
 
             {filePath && <input style={{display: 'none'}} type="image" name='image' value={filePath}/>}
             

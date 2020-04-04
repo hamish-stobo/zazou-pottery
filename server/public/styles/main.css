@@ -20,8 +20,8 @@ html, body {
 }
 
 .main-wrapper {
-    background: rgb(65, 65, 65);
-    color: white;
+    background: rgba(235, 235, 235, 0.45);
+    color: rgb(65, 65, 65);
 }
 
 .main-wrapper>div {
@@ -56,13 +56,13 @@ h2 {
 /* footer styling */
 
 .footer {
-    background: rgb(65, 65, 65);
-    color: white;
+    background: rgba(235, 235, 235, 0.45);
+    color: rgb(65, 65, 65);
     font-size: 1.5rem;
     padding: 1rem 0;
 }
 
 .footer a, .footer a:visited {
     text-decoration: none;
-    color: rgb(255,191,0);
+    color: rgb(66, 132, 255);
 }
