@@ -2,6 +2,6 @@
      baseProfile="full"
      width="200" height="150"
      xmlns="http://www.w3.org/2000/svg">
-     <circle cx="100" cy="65" r="60" stroke="white" stroke-width="1" fill="white" />
-     <polygon fill="rgba(0,0,0,0.8)" points="50,50 100,100 150,50 125,50 100,75 75,50 50,50"/>
+     <circle cx="100" cy="65" r="60" stroke="rgba(130, 167, 235, 0.897)" stroke-width="1" fill="rgba(130, 167, 235, 0.897)" />
+     <polygon fill="rgba(255,255,255,0.8)" points="50,50 100,100 150,50 125,50 100,75 75,50 50,50"/>
 </svg>
