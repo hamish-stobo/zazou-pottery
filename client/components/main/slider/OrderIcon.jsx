@@ -5,7 +5,9 @@ const OrderIcon = ({i, filepath, passIndex}) => {
     return (
         <div>
             <a href="#contact" >
-                <img onClick={() => passIndex(i, filepath)} className="order-icon" src="images/orderIcon.svg" /></a>
+                <span onClick={() => passIndex(i, filepath)} className="order-icon" src="images/orderIcon.svg">Order Me</span>
+                {/* <img onClick={() => passIndex(i, filepath)} className="order-icon" src="images/orderIcon.svg" /> */}
+            </a>
         </div>
     )
 }

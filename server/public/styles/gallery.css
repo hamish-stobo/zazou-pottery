@@ -66,15 +66,22 @@
     justify-content: center;
 }
 
+#contact:visited {
+    text-decoration: none;
+}
+
 .order-icon {
     position: absolute;
+    font-size: 1.8rem;
     top: 75%;
-    right: 25px;
-    height: 50px;
-    width: 50px;
-    background: white;
-    border-radius: 50%;
+    right: 5%;
+    height: 4rem;
+    width: 10rem;
+    background: cornflowerblue;
+    color: white;
+    border-radius: 2.5rem;
     cursor: pointer;
+    padding-top: 0.6rem;
     transition: transform ease-in 0.1s;
 }
 
