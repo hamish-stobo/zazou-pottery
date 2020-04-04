@@ -125,7 +125,21 @@ input:-ms-input-placeholder, textarea::-moz-placeholder {
     height: 15rem;
 }
 
-.contact-form img {
+.contact-form div {
+    position: relative;
+}
+
+.exitBtn {
+    background: rgba(255,255,255,0.8);
+    border-radius: 50%;
+    width: 3rem;
+    padding: 0.4rem;
+    position: absolute;
+    right: 5%;
+    top: 3%;
+}
+
+.contact-form .selectedImg {
     max-width: 95%;
     margin-bottom: 0.5rem;
 }

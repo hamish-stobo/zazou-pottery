@@ -74,7 +74,11 @@ const Form = ({preFill}) => {
             
             <textarea name="message" placeholder="Your Message" value={message} onChange={handleChange} required/>
 
-            {filepath && <img src={filePath} alt="Image to Order"/>}
+            {filepath && 
+            <div>
+              {filePath && <img className="exitBtn" onClick={() => setState({...state, message: '', filePath: ''})} src="images/cross.svg" alt="Exit button"/>}
+              {filePath && <img className="selectedImg" src={filePath} alt="Image to Order"/>}
+            </div>}
 
             {filePath && <input style={{display: 'none'}} type="image" name='image' value={filePath}/>}
             
