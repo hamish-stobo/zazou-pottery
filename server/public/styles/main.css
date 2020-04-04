@@ -9,7 +9,7 @@ html, body {
     text-align: center;
     scroll-behavior: smooth;
     font-family: 'Heebo', sans-serif;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 * {
@@ -36,21 +36,13 @@ h2 {
 /* slide-in on scroll effect */
 
 
-.adefault1, .sdefault2 {
+.adefault1, .sdefault2, .adefault2, .sdefault1 {
     opacity: 0;
     transition: all 1s ease-out;
-    transform: translateX(-100px);
-}
-
-.sdefault, .adefault2, .sdefault1 {
-    opacity: 0;
-    transition: all 1s ease-out;
-    transform: translateX(100px);
 }
 
 .fade-mainEls-in {
     opacity: 1;
-    transform: translateX(0);
 }
 
 /* footer styling */
