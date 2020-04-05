@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from "./layout/Layout.jsx"
 import Main from "./main/Main.jsx"
 import Top from "./main/top/Top.jsx"
 
 const App = () => {
     const [selectedNavItem, setSelectedNavItem] = useState('')
+
     const selected = navItem => {
         setSelectedNavItem(navItem)
     }
