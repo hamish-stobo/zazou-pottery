@@ -4,7 +4,7 @@ import React from 'react'
 
 const Dot = ({ active, handleClick, i }) => {
     const dotStyle = {
-        background: `${active ? 'black' : 'white'}`
+        background: `${active ? 'cornflowerblue' : 'white'}`
     }
     
     return (

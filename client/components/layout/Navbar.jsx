@@ -22,7 +22,7 @@ const Navbar = ({selectedItem, isMounted}) => {
                         const element = document.querySelector(item)
                         const elHeight = isMounted && element ? element.clientHeight : 0
                     return (
-                    <Scene triggerElement={item} duration={elHeight} classToggle={['.' + formatted, 'active-btn']} reverse={true} indicators={true}>
+                    <Scene triggerElement={item} duration={elHeight} classToggle={['.' + formatted, 'active-btn']} reverse={true} indicators={false}>
                     <a onClick={() => select(formatted)} 
                         className={`${selected === formatted ? 'active-btn ' + formatted : formatted}`} 
                         key={item + idx} 

@@ -7,8 +7,30 @@
 
 .scroll-arrow {
   width: 8rem;
+  transform: scale(1);
+	animation: pulser 2.5s ease-in-out 2s infinite;
+}
+
+@keyframes pulser {
+	0% {
+		transform: scale(1);
+	}
+  
+  50% {
+    transform: scale(1.15);
+    filter: blur(0.1rem);
+  }
+	100% {
+		transform: scale(1);
+	}
 }
 
 .scroll-arrow:active {
   filter: invert(100%);
+}
+
+@media screen and (min-width: 450px) {
+  .scroll-arrow {
+    width: 10rem;
+  }
 }

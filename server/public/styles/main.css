@@ -56,3 +56,12 @@ h2 {
     text-decoration: none;
     color: rgb(66, 132, 255);
 }
+
+@media screen and (min-width: 450px) {
+    h2 {
+        font-size: 4rem;
+    }
+}
+
+
+/* min: 576px	min: 768px	min: 992px	min: 1200px */

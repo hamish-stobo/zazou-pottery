@@ -7,6 +7,7 @@ import OrderIcon from './OrderIcon.jsx'
 import slides from '../../../constants/imagesFilePaths'
 
 const getWidth = () => window.innerWidth
+const getHeight = () => window.innerHeight
 
 const Slider = ({passIndex}) => {
 
@@ -114,8 +115,15 @@ const Slider = ({passIndex}) => {
                 <Slide width={getWidth()} key={slide + idx} content={slide} />
             ))}
             </SliderContent>
-            {/* <SliderArrow direction="left" handleClick={prevSlide}/>
-            <SliderArrow direction="right" handleClick={nextSlide} /> */}
+            {
+            getWidth() > 600 
+            ?
+            <>
+              <SliderArrow direction="left" handleClick={prevSlide}/>
+              <SliderArrow direction="right" handleClick={nextSlide} />
+            </>
+            : null
+            }
             <OrderIcon i={activeSlide} filepath={slides[activeSlide]} passIndex={passIndex} />
             <Dots slides={slides} activeIndex={activeSlide} />
         </div>

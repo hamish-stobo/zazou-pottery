@@ -253,3 +253,13 @@ a .email-icon {
 .info-window a:visited {
     text-decoration: none;
 }
+
+@media screen and (min-width: 450px) {
+    .address-wrapper h3 {
+        font-size: 2.5rem;
+    }
+
+    .address-ul {
+        font-size: 1.8rem;
+    }
+}
