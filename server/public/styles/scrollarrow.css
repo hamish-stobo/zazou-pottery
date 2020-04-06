@@ -34,3 +34,9 @@
     width: 10rem;
   }
 }
+
+@media screen and (min-width:950px) {
+  .section-scroll {
+    bottom: 10vh;
+  }
+}

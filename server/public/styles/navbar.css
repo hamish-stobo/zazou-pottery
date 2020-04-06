@@ -37,7 +37,7 @@ a.active-btn {
     }
   }
 
-  @media screen and (min-width: 750px) {
+@media screen and (min-width: 750px) {
     .navbar a {
         width: 12%;
     }
@@ -46,8 +46,19 @@ a.active-btn {
         font-family: 'Josefin Sans', sans-serif;
         width: 52%;
         text-align: left;
-        text-align: center;
+        padding-left: 5%;
         font-size: 2.5rem;
         color: black;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .navbar a {
+        width: 10%;
+    }
+
+    .navbar .nav-icon {
+        width: 60%;
+        padding-left: 7%;
     }
   }
