@@ -32,6 +32,15 @@
     text-decoration: none;
 }
 
+.services-wrapper a:hover {
+    cursor: pointer;
+    color: rgba(255,255,255,0.8);
+}
+
+.services-wrapper a:active {
+    color: white;
+}
+
 @media screen and (min-width: 450px) {
     .services-wrapper h2 {
         font-size: 4rem;
