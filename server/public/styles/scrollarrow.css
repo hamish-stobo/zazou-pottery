@@ -18,7 +18,7 @@
   
   50% {
     transform: scale(1.15);
-    filter: blur(0.1rem);
+    filter: blur(0.05rem);
   }
 	100% {
 		transform: scale(1);
@@ -26,7 +26,7 @@
 }
 
 .scroll-arrow:active {
-  filter: invert(100%);
+  filter: saturate();
 }
 
 @media screen and (min-width: 450px) {

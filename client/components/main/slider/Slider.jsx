@@ -14,6 +14,8 @@ const Slider = ({passIndex, passWinWidth}) => {
     const secondSlide = slides[1]
     const lastSlide = slides[slides.length - 1]
 
+    passWinWidth(getWidth())
+
     const [state, setState] = useState({
         activeSlide: 0,
         translate: getWidth(),

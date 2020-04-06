@@ -87,7 +87,14 @@
     transition: transform ease-in 0.1s;
 }
 
-/* @media screen and (min-width: 600px) {
-    .slider-wrapper {
+@media screen and (min-width: 750px) {
+    .order-icon {
+        height: 5rem;
+        width: 12rem;
+        border-radius: 2.5rem;
+        cursor: pointer;
+        font-size: 2rem;
+        padding-top: 1rem;
+        transition: transform ease-in 0.1s;
     }
-  } */
+  }

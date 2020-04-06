@@ -17,7 +17,7 @@ const Navbar = ({selectedItem, isMounted, winWidth}) => {
 
     return (
         <div className="navbar">
-            {winWidth >  750 ? <a>Zazou Pottery Studio</a> : <></>}
+            {winWidth >  750 ? <a href="#top-first-sect" className="nav-icon">Zazou Pottery Studio</a> : <></>}
             <Controller refreshInterval={100}>
             {linksArray.map((item, idx) => {
                         let formatted = item.slice(1, item.length) 
