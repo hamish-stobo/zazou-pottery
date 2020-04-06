@@ -45,7 +45,7 @@
 }
 
 .slider-arrow:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) !important;
 }
 
 .slider-arrow img:focus {
@@ -85,6 +85,19 @@
     cursor: pointer;
     padding-top: 0.6rem;
     transition: transform ease-in 0.1s;
+}
+
+.order-icon:hover {
+    background: rgba(255,255,255,0.8);
+    color: black;
+    transform: scale(1.05);
+}
+
+.order-icon:active {
+    background: rgba(255,255,255,0.8);
+    color: black;
+    transform: scale(1.05);
+    border: 2px solid rgb(65,65,65)
 }
 
 @media screen and (min-width: 750px) {

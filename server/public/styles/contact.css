@@ -162,13 +162,15 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     cursor: pointer;
+    color: white;
+    background: rgb(65,65,65);
 }
 
 input[type="submit"]:active {
-    /* background: rgba(255,255,255,0.5); */
-    /* color: black; */
-    background: rgb(65, 65, 65);
-    color: rgba(255,255,255)
+    cursor: pointer;
+    color: white;
+    background: rgb(65,65,65);
+    border: 2px solid white;
 }
 
 .icons-wrapper {
