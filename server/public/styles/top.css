@@ -120,6 +120,16 @@
     font-size: 8rem;
     line-height: 7rem;
     margin-left: 10vw;
+    max-width: 70%;
+  }
+
+  .top-header-text {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .top-header {
   }
 
   .top-header-text {

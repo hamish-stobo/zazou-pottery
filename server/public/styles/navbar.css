@@ -20,6 +20,10 @@
     width: 25%;
 }
 
+.navbar a:hover {
+    color: white;
+}
+
 a.active-btn {
     background: rgba(27, 83, 180, 0.568);
     color: white;

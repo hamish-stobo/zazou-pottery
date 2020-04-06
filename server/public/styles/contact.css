@@ -10,7 +10,7 @@
 }
 
 .contact-wrapper h2 {
-    padding-top: 5rem;
+    padding-top: 7rem;
     padding-bottom: 3vh;
 }
 
@@ -84,7 +84,7 @@
     justify-content: space-evenly;
     align-items: center;
     width: 80%;
-    /* background: rgba(255, 255, 255, 0.45); */
+    max-width: 60rem;
 }
 
 .contact-form input, .contact-form textarea{
@@ -95,11 +95,9 @@
     width: 100%;
     text-align: left;
     height: 5rem;
-    /* background: #548aea; */
     background: rgba(255,255,255,0.8);
     border: 0;
     border-radius: 1rem;
-    /* color: white; */
     color: rgb(65, 65, 65);
 }
 
@@ -236,6 +234,7 @@ a .email-icon {
     position: relative;
     height: 40rem;
     width: 100%;
+    max-width: 70rem;
 }
 
 
@@ -261,5 +260,9 @@ a .email-icon {
 
     .address-ul {
         font-size: 1.8rem;
+    }
+
+    .contact-form .selectedImg {
+        max-width: 98%;
     }
 }
