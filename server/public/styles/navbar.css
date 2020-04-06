@@ -39,16 +39,12 @@ a.active-btn {
 
   @media screen and (min-width: 750px) {
     .navbar a {
-        width: 15%;
-    }
-
-    a.active-btn {
-        width: 15%;
+        width: 12%;
     }
 
     .navbar .nav-icon {
         font-family: 'Josefin Sans', sans-serif;
-        width: 40%;
+        width: 52%;
         text-align: left;
         text-align: center;
         font-size: 2.5rem;

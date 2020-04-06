@@ -190,7 +190,15 @@ input[type="submit"]:active {
     margin: 0;
 }
 
+.icons-wrapper a:active {
+    background: rgba(27, 83, 180, 0.568);
+    border: 2px solid white;
+}
 
+
+.icons-wrapper a:hover {
+    background: rgba(27, 83, 180, 0.568);
+}
 
 .icons-wrapper img {
     width: 4rem;
@@ -211,7 +219,8 @@ a .email-icon {
     margin-top: 3rem;
     padding-top: 1rem;
     color: rgb(65, 65, 65);
-    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.9);
+    max-width: 70rem;
 }
 
 .address-wrapper h3 {
@@ -264,5 +273,15 @@ a .email-icon {
 
     .contact-form .selectedImg {
         max-width: 98%;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .address-wrapper {
+        border-radius: 1rem 1rem 0 0 ;
+    }
+
+    .icons-wrapper {
+        max-width: 60rem;
     }
 }
