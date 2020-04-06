@@ -130,9 +130,18 @@
 
 @media screen and (min-width: 700px) {
   .top-header {
+    font-size: 10rem;
+    line-height: 8rem;
+    max-width: 50%;
   }
 
   .top-header-text {
-    font-size: 7rem;
+    font-size: 8.5rem;
+  }
+}
+
+@media screen and (min-width:950px) {
+  .top-header {
+    margin-left: 15vw;
   }
 }

@@ -5,15 +5,20 @@ import Top from "./main/top/Top.jsx"
 
 const App = () => {
     const [selectedNavItem, setSelectedNavItem] = useState('')
+    const [winWidth, setWinWidth] = useState(null)
 
     const selected = navItem => {
         setSelectedNavItem(navItem)
     }
 
+    const getWinWidth = width => {
+        setWinWidth(width)
+    }
+
     return (
     <>
         <Top selected={selected} id="Top" />
-        <Layout selectedItem={selectedNavItem}><Main selected={selected}/></Layout>
+        <Layout winWidth={winWidth} selectedItem={selectedNavItem}><Main passWinWidth={getWinWidth} selected={selected}/></Layout>
     </>
     )
 }

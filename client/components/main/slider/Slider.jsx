@@ -7,9 +7,8 @@ import OrderIcon from './OrderIcon.jsx'
 import slides from '../../../constants/imagesFilePaths'
 
 const getWidth = () => window.innerWidth
-const getHeight = () => window.innerHeight
 
-const Slider = ({passIndex}) => {
+const Slider = ({passIndex, passWinWidth}) => {
 
     const firstSlide = slides[0]
     const secondSlide = slides[1]
@@ -58,6 +57,7 @@ const Slider = ({passIndex}) => {
     }, [transition])
   
     const handleResize = () => {
+      passWinWidth(getWidth())
       setState({ ...state, translate: getWidth(), transition: 0 })
     }
   

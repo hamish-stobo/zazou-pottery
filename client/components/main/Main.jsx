@@ -4,7 +4,7 @@ import Services from './Services.jsx'
 import Gallery from './Gallery.jsx'
 import Contact from './contact/Contact.jsx'
 
-const Main = ({selected}) => {
+const Main = ({selected, passWinWidth}) => {
     const [state, setState] = useState({
         idx: '',
         filepath: ''
@@ -21,7 +21,7 @@ const Main = ({selected}) => {
         <div className="main-wrapper">
             <About />
             <Services selected={selected} />
-            <Gallery passIndex={passIndex} />
+            <Gallery passWinWidth={passWinWidth} passIndex={passIndex} />
             <Contact message={state} />
         </div>
     )

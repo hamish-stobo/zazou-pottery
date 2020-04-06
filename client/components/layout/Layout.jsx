@@ -9,7 +9,7 @@ const Layout = props => {
 
     return (
         <>
-            <Navbar isMounted={isMounted} selectedItem={props.selectedItem} />{props.children}<Footer />
+            <Navbar winWidth={props.winWidth} isMounted={isMounted} selectedItem={props.selectedItem} />{props.children}<Footer />
         </>
     )
 }

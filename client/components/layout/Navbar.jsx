@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Controller, Scene } from 'react-scrollmagic'
 
-const Navbar = ({selectedItem, isMounted}) => {
+const Navbar = ({selectedItem, isMounted, winWidth}) => {
     const linksArray = ['#about', '#services', '#catalogue', '#contact']
     const [selected, setSelected] = useState('')
 
@@ -13,8 +13,11 @@ const Navbar = ({selectedItem, isMounted}) => {
         setSelected(string)
     }
 
+    console.log('window width, ', winWidth)
+
     return (
         <div className="navbar">
+            {winWidth >  750 ? <a>Zazou Pottery Studio</a> : <></>}
             <Controller refreshInterval={100}>
             {linksArray.map((item, idx) => {
                         let formatted = item.slice(1, item.length) 
