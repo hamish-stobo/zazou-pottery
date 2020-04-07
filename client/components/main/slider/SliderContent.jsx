@@ -13,7 +13,6 @@ const SliderContent = ({ translate, transition, width, children, dragToScroll })
     const calcDifference = (a, b) => {
         if(!entered) { return }
         else {
-        // console.log('start', a, 'end', b)
         dragToScroll(a - b)
     }
 }

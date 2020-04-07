@@ -13,8 +13,6 @@ const Navbar = ({selectedItem, isMounted, winWidth}) => {
         setSelected(string)
     }
 
-    console.log('window width, ', winWidth)
-
     return (
         <div className="navbar">
             {winWidth >  750 ? <a href="#top-first-sect" className="nav-icon">Zazou Pottery Studio</a> : <></>}
