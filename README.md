@@ -1,5 +1,5 @@
 # zazou-pottery-website
-##Portfolio website made for a pottery studio.
+## Portfolio website made for a pottery studio.
 
 ##### Check out the dev branch to see the finished repo.
 
